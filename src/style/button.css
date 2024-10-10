@@ -1,0 +1,44 @@
+/* Button Styles */
+.button {
+  color: #000;
+  background-color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+/* Day Mode Button */
+.button.day-mode {
+  color: black;
+  /* background-color: white; */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Prevent hover effect when hovering over the image */
+.button img {
+  pointer-events: none; /* Disable pointer events on the image */
+}
+
+/* Dark Mode Button */
+.btn-dark {
+  background-color: #000;
+  color: #ffffff;
+}
+
+/* Hover Effects */
+.btn-secondary:hover {
+  /* background-color: #343a40; */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Disable hover effects on the button when the image is clicked */
+.button:focus {
+  outline: none; /* Remove focus outline */
+}
+
+.btn:hover{
+  background-color: #ffffff;
+}

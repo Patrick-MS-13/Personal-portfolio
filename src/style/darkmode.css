@@ -1,0 +1,25 @@
+/* Dark Mode Styles */
+.bg-dark {
+    background-color: #343a40;
+    color: #ffffff;
+  }
+  
+  .bg-light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .bg-dark .skill-card, 
+  .bg-dark .project-card {
+    background-color: #495057;
+    color: #ffffff;
+  }
+  
+  .navbar-dark {
+    background-color: transparent;
+  }
+  
+  .navbar-light {
+    background-color: #ffffff;
+  }
+  

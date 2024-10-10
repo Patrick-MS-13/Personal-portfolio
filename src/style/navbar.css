@@ -1,0 +1,120 @@
+/* Navbar */
+.navbar {
+    padding: 15px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-brand:hover {
+    color: #fefefe;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  .nav-item {
+    margin: 0 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    padding: 7px;
+    margin: 0px 15px;
+  }
+  
+  .navbar-dark .nav-link {
+    color: #fff;
+  }
+  
+  .navbar-light .nav-link {
+    color: #000;
+  }
+  
+  .navbar-dark .nav-link:hover {
+    color: #ccc;
+  }
+  
+  .navbar-light .nav-link:hover {
+    color: #007bff;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 10px 0;
+    }
+  
+    .navbar-brand {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Styling for the date and time display */
+.navbar-brand {
+  font-size: 1.2rem; /* Larger font size for the main part */
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.05rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand.light-mode {
+  color: #333; /* Dark color for light mode */
+}
+
+.navbar-brand.dark-mode {
+  color: #f1f1f1; /* Light color for dark mode */
+}
+
+/* AM/PM Styling */
+.time-period {
+  font-size: 0.7rem; /* Make AM/PM smaller */
+  margin-left: 0.2rem;
+  vertical-align: top;
+}
+
+/* Optional: Add pulse effect */
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.navbar-brand {
+  animation: pulse 2s infinite;
+}
+
+/* Responsive adjustments for date/time on smaller screens */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}

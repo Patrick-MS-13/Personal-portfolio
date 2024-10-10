@@ -1,0 +1,103 @@
+/* Projects Section */
+.projects-section {
+  background-color: #f9f9f9; /* Light background */
+  padding: 60px 0; /* Increased padding for better spacing */
+}
+
+.projects-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem; /* Main heading size */
+}
+
+.projects-section .row {
+  justify-content: space-evenly; /* Space between cards */
+  margin: 30px;
+}
+
+/* Project Card Styles */
+.project-card {
+  background-color: #ffffff; /* Light color for normal mode */
+  border-radius: 12px; /* Increased border-radius for uniformity */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease; /* Combined transitions */
+  text-align: center;
+  padding: 20px;
+  height: 250px; /* Fixed height for uniform size */
+  display: flex; /* Flexbox for better alignment */
+  flex-direction: column; /* Align items vertically */
+  justify-content: space-between; /* Evenly distribute space */
+}
+
+/* Hover Effects */
+.project-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow effect */
+}
+
+/* Project Title */
+.project-title {
+  font-size: 1.5rem; /* Consistent title size */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-description {
+  font-size: 1rem; /* Consistent description size */
+}
+
+/* Project Icon Styles */
+.project-icon {
+  font-size: 40px; /* Consistent icon size */
+  color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-section .project-card {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .projects-section .project-title {
+    font-size: 1.3rem; /* Smaller title on mobile */
+  }
+}
+
+/* Hover Effect for Dark Mode Project Card */
+.project-card.dark-mode:hover {
+  background-color: #2c2c2c; /* Keep the same background color on hover */
+  border-color: #007bff; /* Optional: Add border color for hover effect */
+}
+
+.bg-dark .project-card{
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+/* Live URL Button Styles */
+.live-url-button {
+  background-color: #007bff; /* Bootstrap primary color */
+  border-color: #007bff; /* Same color for the border */
+  padding: 10px 20px; /* Padding for the button */
+  font-size: 1.1rem; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  color: #ffffff; /* Text color */
+  text-decoration: none; /* Remove underline for links */
+  display: inline-block; /* Allows padding and margin */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover Effect */
+.live-url-button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+  border-color: #0056b3; /* Match border color on hover */
+}
+
+/* Optional: Focus effect */
+.live-url-button:focus {
+  outline: none; /* Remove outline */
+}
+
+

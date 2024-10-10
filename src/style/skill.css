@@ -1,0 +1,76 @@
+/* Skills Section */
+.skills-section {
+  background-color: #f9f9f9; /* Light background for normal mode */
+  padding: 60px 0; /* Increased padding for better spacing */
+}
+
+.skills-section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem; /* Main heading size */
+}
+
+.skills-section .row {
+  justify-content: space-evenly; /* Space between cards */
+}
+
+/* Skill Card Styles */
+.skill-card {
+  background-color: #ffffff; /* Light color for normal mode */
+  border-radius: 12px; /* Consistent border-radius */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s ease; /* Combined transitions */
+  text-align: center;
+  padding: 20px;
+  height: 250px; /* Fixed height for uniform size */
+  display: flex; /* Flexbox for better alignment */
+  flex-direction: column; /* Align items vertically */
+  justify-content: space-between; /* Evenly distribute space */
+}
+
+/* Skill Card Hover Effects */
+.skill-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover shadow effect */
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Skill Title */
+.skill-title {
+  font-size: 1.5rem; /* Consistent title size */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Skill Description */
+.skill-description {
+  font-size: 1rem; /* Consistent description size */
+}
+
+/* Skill Icon Styles */
+.skill-icon {
+  font-size: 40px; /* Consistent icon size */
+  color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 15px;
+}
+
+/* Responsive Styles for Skills */
+@media (max-width: 768px) {
+  .skills-section .skill-card {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .skills-section .skill-title {
+    font-size: 1.3rem; /* Smaller title on mobile */
+  }
+}
+
+/* Dark Mode Styles for Skills */
+.skill-card.dark-mode {
+  background-color: #2c2c2c; /* Dark background for dark mode */
+  color: #ffffff; /* Light text for dark mode */
+}
+
+/* Custom styles for rounded image */
+.rounded-custom {
+  border-radius: 50%; /* Circular image */
+}

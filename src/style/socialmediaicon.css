@@ -1,0 +1,30 @@
+/* Social Media Icons */
+.social-links {
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center the icons */
+  gap: 1rem; /* Space between icons */
+}
+
+.social-links img {
+  width: 40px; /* Default width for larger screens */
+  height: auto; /* Maintain aspect ratio */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover Effect */
+.social-links img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .social-links img {
+    width: 30px; /* Smaller size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links img {
+    width: 25px; /* Even smaller size for mobile */
+  }
+}
