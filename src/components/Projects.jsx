@@ -34,7 +34,7 @@ const Projects = ({ isDarkMode }) => {
     },
     {
       // pic: "./images/Chess Board.png",
-      name: "Analog clock",
+      name: "ANALOG CLOCK",
       url: "https://m00n-clock.netlify.app/",
       description:
         "Experience time in a timeless way with our Analog Clock app. Elegantly designed to bring a classic touch to your device, it’s more than just telling time—it’s a style statement. Stay punctual and inspired, all in one glance.",
