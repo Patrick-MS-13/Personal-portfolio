@@ -33,12 +33,12 @@ const Projects = ({ isDarkMode }) => {
       skills: ["React", "JavaScript", "CSS"],
     },
     {
-      pic: "./images/Chess Board.png",
-      name: "CHESS BOARD",
-      url: "https://vijayk23.github.io/ChessBoard/",
+      // pic: "./images/Chess Board.png",
+      name: "Analog clock",
+      url: "https://m00n-clock.netlify.app/",
       description:
-        "Immerse yourself in strategic battles with our Chess Board app. Play, learn, and master the classic game on your device. Checkmate!",
-      skills: ["React", "JavaScript", "CSS"],
+        "Experience time in a timeless way with our Analog Clock app. Elegantly designed to bring a classic touch to your device, it’s more than just telling time—it’s a style statement. Stay punctual and inspired, all in one glance.",
+        skills: ["React", "JavaScript", "CSS"],
     },
     {
       pic: "./images/personal portfolio.png",
@@ -52,15 +52,13 @@ const Projects = ({ isDarkMode }) => {
 
   return (
     <div
-      className={`projects-section text-center py-5 ${
-        isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
-      }`}
+      className={`projects-section text-center py-5 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+        }`}
     >
       <h2
         id="projects"
-        className={`mb-4 ${
-          isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
-        }`}
+        className={`mb-4 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+          }`}
       >
         Projects
       </h2>
@@ -92,9 +90,8 @@ function Project({ proj, isDarkMode }) {
 
   return (
     <div
-      className={`project-card ${
-        isDarkMode ? "light-card" : "bg-light text-dark"
-      } h-100`}
+      className={`project-card ${isDarkMode ? "light-card" : "bg-light text-dark"
+        } h-100`}
     >
       <div className="card-body">
         <h4 className="project-title">{proj.name}</h4>
