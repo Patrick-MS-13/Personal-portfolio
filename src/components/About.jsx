@@ -8,7 +8,6 @@ import resume from "./../img/resume.svg";
 import Imbatman from "./../img/I'm-batman.png";
 import './../style/about.css'; 
 
-
 const About = ({ isDarkMode }) => (
   <section id="about" className={`about-section py-5 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"}`}>
     <div className="container text-center">
