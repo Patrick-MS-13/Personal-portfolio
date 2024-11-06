@@ -108,9 +108,7 @@
   }
 }
 
-.navbar-brand {
-  animation: pulse 2s infinite;
-}
+
 
 /* Responsive adjustments for date/time on smaller screens */
 @media (max-width: 768px) {

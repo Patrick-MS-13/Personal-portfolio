@@ -13,10 +13,18 @@ const About = ({ isDarkMode }) => (
     <div className="container text-center">
       <h2 className="mb-4">About Me</h2>
       <p className="mb-4">
-        Hi, I'm <strong>Patrick MS</strong>, a Frontend Developer with
-        a passion for creating interactive, user-friendly web applications. I
-        have experience with HTML, CSS, JavaScript, React, and Redux, and have
-        worked on various projects, including CRM systems and email builders.
+        Hi, I'm{" "}
+        <strong
+          style={{
+            color: isDarkMode ? "yellow" : "black", // Set name color to yellow in night mode
+          }}
+        >
+          {isDarkMode ? "PATRICK BATMAN" : "Patrick MS"}
+        </strong>
+        , a Frontend Developer with a passion for creating interactive,
+        user-friendly web applications. I have experience with HTML, CSS,
+        JavaScript, React, and Redux, and have worked on various projects,
+        including CRM systems and email builders.
       </p>
       
       <div className="d-flex justify-content-center align-items-center mb-3">
