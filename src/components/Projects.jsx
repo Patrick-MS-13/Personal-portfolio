@@ -16,6 +16,13 @@ const Projects = ({ isDarkMode }) => {
       skills: ["React", "JavaScript", "CSS"],
     },
     {
+      // pic: "./images/Chess Board.png",
+      name: "TIME APP",
+      url: "https://patrick-time-app.netlify.app/",
+      description:"The Time App is a versatile and visually engaging time management tool built with React, designed to enhance productivity through features like a world clock, stopwatch, alarm, and reminders. Users can keep track of different time zones, set reminders for important events, and manage tasks efficiently.",
+      skills: ["React", "JavaScript", "CSS"],
+    },
+    {
       // pic: "./images/calculator.png",
       name: "SPACE TOUR",
       url: "https://space-with-patrick.netlify.app/",
