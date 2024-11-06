@@ -1,7 +1,7 @@
 import React from "react";
 import profileImage from "./../img/Patrick.png"; // Adjust the path according to your folder structure
 import batman from "./../img/batman.png"; // Adjust the path according to your folder structure
-import cvFile from "../file/PATRICK.pdf"; // Adjust the path to your CV file
+import cvFile from "../file/PATRICK's Resume.pdf"; // Adjust the path to your CV file
 import linkedin from "./../img/linkedin.svg";
 import github from "./../img/github.svg";
 import resume from "./../img/resume.svg";
