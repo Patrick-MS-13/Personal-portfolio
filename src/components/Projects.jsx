@@ -9,10 +9,10 @@ import rocket from "./../img/rocket.svg"; // Import the rocket SVG
 const Projects = ({ isDarkMode }) => {
   const projects = [
     {
-      // pic: "./images/Todo-list.png",
-      name: "IMAGE SLIDER",
-      url: "https://patrick-image-slider.netlify.app/",
-      description: "Explore breathtaking travel destinations with this image slider. From the serene landscapes of Finland and Iceland to the vibrant charm of Australia, the Netherlands, Ireland, and Switzerland, discover stunning locations that spark wanderlust.",
+      // pic: "./images/Chess Board.png",
+      name: "ANALOG CLOCK",
+      url: "https://m00n-clock.netlify.app/",
+      description: "Experience time in a timeless way with our Analog Clock app. Elegantly designed to bring a classic touch to your device, it’s more than just telling time—it’s a style statement. Stay punctual and inspired, all in one glance.",
       skills: ["React", "JavaScript", "CSS"],
     },
     {
@@ -23,26 +23,24 @@ const Projects = ({ isDarkMode }) => {
       skills: ["React", "JavaScript", "CSS"],
     },
     {
+      // pic: "./images/Todo-list.png",
+      name: "IMAGE SLIDER",
+      url: "https://patrick-image-slider.netlify.app/",
+      description: "Explore breathtaking travel destinations with this image slider. From the serene landscapes of Finland and Iceland to the vibrant charm of Australia, the Netherlands, Ireland, and Switzerland, discover stunning locations that spark wanderlust.",
+      skills: ["React", "JavaScript", "CSS"],
+    },
+    {
       // pic: "./images/STOPWATCH.png",
       name: "APOLOGY EXPRESS",
       url: "https://sorry-from-patrick.netlify.app/",
-      description:"Apology Express offers a heartfelt way to say sorry with just one click. Send your sincerest apologies and express your emotions in a simple, meaningful gesture. Make amends and show your loved ones how much you care.",
+      description: "Apology Express offers a heartfelt way to say sorry with just one click. Send your sincerest apologies and express your emotions in a simple, meaningful gesture. Make amends and show your loved ones how much you care.",
       skills: ["React", "JavaScript", "CSS"],
     },
     {
-      // pic: "./images/Chess Board.png",
-      name: "ANALOG CLOCK",
-      url: "https://m00n-clock.netlify.app/",
-      description:
-        "Experience time in a timeless way with our Analog Clock app. Elegantly designed to bring a classic touch to your device, it’s more than just telling time—it’s a style statement. Stay punctual and inspired, all in one glance.",
-      skills: ["React", "JavaScript", "CSS"],
-    },
-    {
-      pic: "./images/personal portfolio.png",
-      name: "PERSONAL PORTFOLIO",
-      url: "https://vijay23.netlify.app/",
-      description:
-        "Explore my journey through innovative projects and skills in my personal portfolio app. Discover my creative world.",
+      // pic: "./images/personal portfolio.png",
+      name: "PERSONAL PROFILE",
+      url: "https://patrick-profile-card.netlify.app/",
+      description: "An interactive profile card that responds to user interactions with hover effects and smooth transitions.",
       skills: ["React", "JavaScript", "CSS"],
     },
   ];
