@@ -9,27 +9,24 @@ import rocket from "./../img/rocket.svg"; // Import the rocket SVG
 const Projects = ({ isDarkMode }) => {
   const projects = [
     {
-      pic: "./images/Todo-list.png",
-      name: "TODO-LIST",
-      url: "https://vijayk23.github.io/Todolist/",
-      description:
-        "Efficiently manage tasks with our intuitive todo-list app. Stay organized and boost productivity on the go!",
+      // pic: "./images/Todo-list.png",
+      name: "IMAGE SLIDER",
+      url: "https://patrick-image-slider.netlify.app/",
+      description: "Explore breathtaking travel destinations with this image slider. From the serene landscapes of Finland and Iceland to the vibrant charm of Australia, the Netherlands, Ireland, and Switzerland, discover stunning locations that spark wanderlust.",
       skills: ["React", "JavaScript", "CSS"],
     },
     {
-      pic: "./images/calculator.png",
-      name: "CALCULATOR",
-      url: "https://vijayk23.github.io/Calculator/",
-      description:
-        "Streamline your calculations with our user-friendly calculator app. Accurate solutions for equations on the fly.",
+      // pic: "./images/calculator.png",
+      name: "SPACE TOUR",
+      url: "https://space-with-patrick.netlify.app/",
+      description: "Embark on an out-of-this-world journey with our Space Tour slider. Explore stunning visuals of the universe, from distant galaxies to breathtaking celestial bodies, and experience the wonders of space like never before.",
       skills: ["React", "JavaScript", "CSS"],
     },
     {
-      pic: "./images/STOPWATCH.png",
-      name: "STOP WATCH",
-      url: "https://vijaykstopwatch.netlify.app/",
-      description:
-        "React stopwatch: A simple timer app with start, stop, and reset functionality to track elapsed time accurately.",
+      // pic: "./images/STOPWATCH.png",
+      name: "APOLOGY EXPRESS",
+      url: "https://sorry-from-patrick.netlify.app/",
+      description:"Apology Express offers a heartfelt way to say sorry with just one click. Send your sincerest apologies and express your emotions in a simple, meaningful gesture. Make amends and show your loved ones how much you care.",
       skills: ["React", "JavaScript", "CSS"],
     },
     {
@@ -38,7 +35,7 @@ const Projects = ({ isDarkMode }) => {
       url: "https://m00n-clock.netlify.app/",
       description:
         "Experience time in a timeless way with our Analog Clock app. Elegantly designed to bring a classic touch to your device, it’s more than just telling time—it’s a style statement. Stay punctual and inspired, all in one glance.",
-        skills: ["React", "JavaScript", "CSS"],
+      skills: ["React", "JavaScript", "CSS"],
     },
     {
       pic: "./images/personal portfolio.png",
