@@ -16,7 +16,7 @@ const skills = [
 
 const SkillCard = ({ skill, isDarkMode, toggleDescription, expandedSkill }) => {
   return (
-    <div className={`col-md-4 mb-4`}>
+    <div className={`col-md-4 mb-5`}>
       <div className={`skill-card ${isDarkMode ? 'dark-mode' : 'bg-light text-dark'}`}>
         <div className="skill-icon">
           <img 

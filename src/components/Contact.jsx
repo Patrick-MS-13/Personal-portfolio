@@ -5,32 +5,68 @@ const Contact = ({ isDarkMode }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [submitted, setSubmitted] = useState(false);
+  const [statusMessage, setStatusMessage] = useState(''); // For success or error message
+  const [statusType, setStatusType] = useState(''); // 'success' or 'error'
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // You can add your form submission logic here (e.g., API call)
-    console.log({ name, email, message });
-    setSubmitted(true);
-    // Reset form fields after submission
+  
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+  
+    try {
+      const response = await fetch('https://formspree.io/f/mldenrna', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json', // Add this header
+        },
+        body: formData,
+      });
+  
+      if (response.ok) {
+        setStatusMessage('Your message has been sent!');
+        setStatusType('success');
+      } else {
+        setStatusMessage('Something went wrong. Please try again.');
+        setStatusType('error');
+      }
+    } catch (error) {
+      // console.error('Error submitting form:', error);
+      setStatusMessage('Something went wrong. Please try again.');
+      setStatusType('error');
+    }
+  
     setName('');
     setEmail('');
     setMessage('');
+  
+    setTimeout(() => {
+      setStatusMessage('');
+      setStatusType('');
+    }, 4000);
   };
+  
+  
 
   return (
     <section id="contact" className={`contact-section py-5 ${isDarkMode ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
       <div className="container">
         <h2 className="text-center mb-4">Contact Me</h2>
-        {submitted && (
-          <div className="alert alert-success text-center">
-            Your message has been sent!
+        
+        {/* Show success or error message */}
+        {statusMessage && (
+          <div className={`alert text-center ${statusType === 'success' ? 'alert-success' : 'alert-danger'}`}>
+            {statusMessage}
           </div>
         )}
+
         <form onSubmit={handleSubmit} className="mx-auto" style={{ maxWidth: '600px' }}>
           <div className="form-group mb-3">
             <input
               type="text"
+              name="name"
               className="form-control"
               placeholder="Your Name"
               value={name}
@@ -41,6 +77,7 @@ const Contact = ({ isDarkMode }) => {
           <div className="form-group mb-3">
             <input
               type="email"
+              name="email"
               className="form-control"
               placeholder="Your Email"
               value={email}
@@ -51,6 +88,7 @@ const Contact = ({ isDarkMode }) => {
           <div className="form-group mb-3">
             <textarea
               className="form-control"
+              name="message"
               rows="4"
               placeholder="Your Message"
               value={message}

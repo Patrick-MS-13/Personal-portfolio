@@ -11,7 +11,7 @@
 }
 
 .skills-section .row {
-  justify-content: space-evenly; /* Space between cards */
+  justify-content: center; /* Space between cards */
 }
 
 /* Skill Card Styles */
