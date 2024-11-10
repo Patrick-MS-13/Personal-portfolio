@@ -6,12 +6,23 @@ import linkedin from "./../img/linkedin.svg";
 import github from "./../img/github.svg";
 import resume from "./../img/resume.svg";
 import Imbatman from "./../img/I'm-batman.png";
-import './../style/about.css'; 
+import './../style/about.css';
 
 const About = ({ isDarkMode }) => (
   <section id="about" className={`about-section py-5 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"}`}>
     <div className="container text-center">
-      <h2 className="mb-4">About Me</h2>
+      <h2
+        className="mb-4"
+        style={{
+          width: "175px",
+          height: "50px",
+          margin: "0 auto", // Center horizontally
+          textAlign: "center", // Center text within the h2 element
+          fontWeight: "900" // Set font weight to normal
+        }}
+      >
+        About Me
+      </h2>
       <p className="mb-4">
         Hi, I'm{" "}
         <strong
@@ -26,7 +37,7 @@ const About = ({ isDarkMode }) => (
         JavaScript, React, and Redux, and have worked on various projects,
         including CRM systems and email builders.
       </p>
-      
+
       <div className="d-flex justify-content-center align-items-center mb-3">
         <img
           src={isDarkMode ? batman : profileImage} // Conditional rendering
@@ -45,7 +56,7 @@ const About = ({ isDarkMode }) => (
           />
         )}
       </div>
-      
+
       {/* Social Links */}
       <div className="social-links mt-4">
         <a

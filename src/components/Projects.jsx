@@ -19,7 +19,7 @@ const Projects = ({ isDarkMode }) => {
       // pic: "./images/Chess Board.png",
       name: "TIME APP",
       url: "https://patrick-time-app.netlify.app/",
-      description:"The Time App is a versatile and visually engaging time management tool built with React, designed to enhance productivity through features like a world clock, stopwatch, alarm, and reminders. Users can keep track of different time zones, set reminders for important events, and manage tasks efficiently.",
+      description: "The Time App is a versatile and visually engaging time management tool built with React, designed to enhance productivity through features like a world clock, stopwatch, alarm, and reminders. Users can keep track of different time zones, set reminders for important events, and manage tasks efficiently.",
       skills: ["React", "JavaScript", "CSS"],
     },
     {
@@ -60,7 +60,9 @@ const Projects = ({ isDarkMode }) => {
       <h2
         id="projects"
         className={`mb-4 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
-          }`}
+          }`} style={{
+            width: "140px", margin: "0 auto", fontWeight: "900",
+          }}
       >
         Projects
       </h2>

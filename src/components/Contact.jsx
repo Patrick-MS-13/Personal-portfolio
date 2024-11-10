@@ -48,12 +48,10 @@ const Contact = ({ isDarkMode }) => {
     }, 4000);
   };
   
-  
-
   return (
     <section id="contact" className={`contact-section py-5 ${isDarkMode ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
       <div className="container">
-        <h2 className="text-center mb-4">Contact Me</h2>
+        <h2 className="text-center mb-4" style={{width: "202px", margin: "0 auto", fontWeight: "900",  textAlign: "center"}}>Contact Me</h2>
         
         {/* Show success or error message */}
         {statusMessage && (

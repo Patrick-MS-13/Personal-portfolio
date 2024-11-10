@@ -19,12 +19,12 @@ const SkillCard = ({ skill, isDarkMode, toggleDescription, expandedSkill }) => {
     <div className={`col-md-4 mb-5`}>
       <div className={`skill-card ${isDarkMode ? 'dark-mode' : 'bg-light text-dark'}`}>
         <div className="skill-icon">
-          <img 
-            src={skill.icon} 
-            alt={`${skill.title} icon`} 
-            className="img-fluid rounded-custom" 
-            width="68" 
-            height="68" 
+          <img
+            src={skill.icon}
+            alt={`${skill.title} icon`}
+            className="img-fluid rounded-custom"
+            width="68"
+            height="68"
           />
         </div>
         <h3 className="skill-title">{skill.title}</h3>
@@ -49,7 +49,11 @@ const Skill = ({ isDarkMode }) => {
   return (
     <section className={`skills-section ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"}`}>
       <div className="container">
-        <h2 id="skills" className={`${isDarkMode ? "text-light" : "text-dark"} text-center`}>Skills</h2>
+        <h2 id="skills" className={`${isDarkMode ? "text-light" : "text-dark"} text-center`} style={{
+          width: "110px", height: "50px", margin: "0 auto",
+          fontWeight: "900",
+          marginBottom: "revert-layer"
+        }}>Skills</h2>
         <div className="row">
           {skills.map(skill => (
             <SkillCard key={skill.id} skill={skill} isDarkMode={isDarkMode} toggleDescription={toggleDescription} expandedSkill={expandedSkill} />
