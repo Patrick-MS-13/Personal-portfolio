@@ -6,7 +6,6 @@ const WelcomeMessage = ({ message = "Welcome to my portfolio!", delay = 3000, du
 
   useEffect(() => {
     const timer = setTimeout(() => setShowMessage(true), delay); // Show after `delay` ms
-
     const hideTimer = setTimeout(() => setShowMessage(false), delay + duration); // Hide after `duration` ms
 
     return () => {
