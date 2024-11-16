@@ -6,6 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor';
+import WelcomeMessage from './components/welcome Notes/WelcomeMessage';
 import'./style/button.css'
 import './style/main.css'; 
 import './style/darkmode.css';
@@ -29,6 +30,7 @@ const App = () => {
       <Projects isDarkMode={isDarkMode} /> 
       <Contact isDarkMode={isDarkMode} /> 
       <Footer isDarkMode={isDarkMode} /> 
+      <WelcomeMessage isDarkMode={isDarkMode} />
     </div>
   );
 }
