@@ -46,7 +46,7 @@ const Projects = ({ isDarkMode }) => {
     {
       // pic: "./images/personal portfolio.png",
       name: "FLYING HEARTS",
-      url: "https://patrick-heart-for-you-only.netlify.app/",
+      url: "https://lup-tup.netlify.app/",
       description: "Flying Hearts is an interactive web app featuring floating hearts that respond to user interactions. With smooth animations and custom vector graphics, it offers a playful and engaging experience.",
       skills: ["React", "JavaScript", "CSS"],
     },
