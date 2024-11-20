@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./WelcomeMessage.css"; // Import external styles
 
-const WelcomeMessage = ({ message = "Welcome to my portfolio!", delay = 3000, duration = 5000 }) => {
+const WelcomeMessage = ({ message = "Welcome to my portfolio! 🙏", delay = 3000, duration = 5000 }) => {
   const [showMessage, setShowMessage] = useState(false);
 
   useEffect(() => {
