@@ -11,8 +11,9 @@
 }
 
 .projects-section .row {
-  justify-content: space-evenly; /* Space between cards */
-  margin: 30px;
+  margin: 0px auto;
+  max-width: 1327px;
+  justify-content: space-evenly;
 }
 
 /* Project Card Styles */

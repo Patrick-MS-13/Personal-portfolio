@@ -1,6 +1,6 @@
 /* Social Media Icons */
 .social-links {
-  display: flex; /* Flexbox for alignment */
+  /* display: flex; Flexbox for alignment */
   justify-content: center; /* Center the icons */
   gap: 1rem; /* Space between icons */
 }

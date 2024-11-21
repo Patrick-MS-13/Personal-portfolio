@@ -11,17 +11,17 @@
 .about-section p {
   font-size: 1.25rem;
   line-height: 1.6;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 
 .about-section img {
   border-radius: 10%;
   transition: transform 0.3s ease;
 }
-
+/* 
 .about-section img:hover {
   transform: scale(1.05);
-}
+} */
 
 /* Social Links */
 .social-links {
@@ -62,4 +62,20 @@
   .about-section p {
     font-size: 1rem;
   }
+}
+
+
+@keyframes fadeInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50%) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.image-animation {
+  animation: fadeInFromRight 2s ease-in-out forwards; /* 'forwards' ensures the final state is retained */
 }
