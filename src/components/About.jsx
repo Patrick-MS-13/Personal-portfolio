@@ -7,6 +7,7 @@ import github from "./../img/github.svg";
 import resume from "./../img/resume.svg";
 // import Imbatman from "./../img/I'm-batman.png";
 import './../style/about.css';
+import { Typewriter } from 'react-simple-typewriter'
 
 const About = ({ isDarkMode }) => (
   <section
@@ -36,7 +37,18 @@ const About = ({ isDarkMode }) => (
           >
             {isDarkMode ? "PATRICK BATMAN" : "Patrick MS"}
           </strong>
-          , a Frontend Developer with a passion for creating interactive,
+          , a {" "}
+          <span style={{ color: isDarkMode ? "yellow" : "black"}}>
+            <Typewriter
+              words={["Frontend Developer", "Web Developer", "JavaScript Enthusiast"]}
+              loop={0} // Infinite loop
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </span>{" "} with a passion for creating interactive,
           user-friendly web applications. I have experience with HTML, CSS,
           JavaScript, React, and Redux, and have worked on various projects,
           including CRM systems and email builders.
