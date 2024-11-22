@@ -61,12 +61,12 @@ const Projects = ({ isDarkMode }) => {
 
   return (
     <div
-      className={`projects-section text-center py-5 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+      className={`container projects-section text-center py-5 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
         }`}
     >
       <h2
         id="projects"
-        className={`mb-4 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
+        className={`col-sm-12 col-md-6 col-lg-12 mb-5 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"
           }`} style={{
             width: "140px", margin: "0 auto", fontWeight: "900",
           }}

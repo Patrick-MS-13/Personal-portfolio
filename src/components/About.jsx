@@ -1,6 +1,6 @@
 import React from "react";
-import profileImage from "./../img/file.png"; // Adjust the path according to your folder structure
-import batman from "./../img/batman.png"; // Adjust the path according to your folder structure
+import profileImage from "./../img/file.png"; 
+import batman from "./../img/batman.png"; 
 import cvFile from "../file/PATRICK's Resume.pdf"; // Adjust the path to your CV file
 import linkedin from "./../img/linkedin.svg";
 import github from "./../img/github.svg";
@@ -13,9 +13,9 @@ const About = ({ isDarkMode }) => (
     id="about"
     className={`about-section py-5 ${isDarkMode ? "bg-dark text-light" : "bg-light text-dark"}`}
   >
-    <div className="container d-flex flex-wrap flex-md-row align-items-center">
+    <div className="container-about d-flex flex-wrap flex-md-row align-items-center">
       {/* About Me Section */}
-      <div className="about-content" style={{ flex: "1", marginLeft: "80px" }}>
+      <div className="about-content" style={{ flex: "1"}}>
         <h2
           className="mb-4"
           style={{
@@ -43,7 +43,7 @@ const About = ({ isDarkMode }) => (
         </p>
 
         {/* Social Links */}
-        <div className="social-links mt-4 d-flex justify-content-start align-items-center gap-3">
+        <div className="social-links mt-4 d-flex align-items-center gap-3">
           <a
             href="https://www.linkedin.com/in/patrick-ms-a9a435231"
             target="_blank"
@@ -69,16 +69,14 @@ const About = ({ isDarkMode }) => (
         <img
           src={isDarkMode ? batman : profileImage} // Conditional rendering
           alt="Profile or Batman"
-          className="img-fluid image-animation" // Add animation class here
+          className="profile-image img-fluid image-animation" // Add animation and profile-image class here
           style={{
-            borderRadius: "10%",
-            width: "600px", // Adjust the width as needed
-            height: "auto",
-            marginTop: isDarkMode ? "-78px" : "-70px",
-            marginBottom: isDarkMode ? "-380px" : "-235px",
-            marginLeft: "95px",
+            marginTop: isDarkMode ? "-78px" : "-90px",
+            marginBottom: isDarkMode ? "-380px" : "-252px",
+            // marginLeft: "58px",
           }}
         />
+
       </div>
     </div>
   </section>
