@@ -38,7 +38,7 @@ const About = ({ isDarkMode }) => (
             {isDarkMode ? "PATRICK BATMAN" : "Patrick MS"}
           </strong>
           , a {" "}
-          <span style={{ color: isDarkMode ? "yellow" : "black"}}>
+          <span>
             <Typewriter
               words={["Frontend Developer", "Web Developer", "JavaScript Enthusiast"]}
               loop={0} // Infinite loop
