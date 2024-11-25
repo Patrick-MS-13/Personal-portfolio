@@ -21,7 +21,7 @@
 
 .about-section img {
   border-radius: 10%;
-  transition: transform 0.2s ease !important;
+  transition: transform 0.2s ease;
 }
 
 /* Profile Image */
