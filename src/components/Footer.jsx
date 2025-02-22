@@ -47,8 +47,8 @@ const BackToTopButton = ({ isDarkMode }) => { // Accept isDarkMode as a prop
         onClick={scrollToTop}
         className={`btn position-fixed bottom-0 end-0 m-4 rounded-circle d-flex align-items-center justify-content-center ${isDarkMode ? "bg-light text-dark" : "bg-dark text-white"}`} // Conditional styles
         style={{
-          width: '30px', // Increased size for better visibility
-          height: '30px',
+          width: '63px', // Increased size for better visibility
+          height: '43px',
           zIndex: '9999',
         }}
         aria-label="Back to Top" // Accessibility improvement

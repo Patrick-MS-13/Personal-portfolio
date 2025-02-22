@@ -86,16 +86,18 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
                 variant="light"
                 onClick={toggleDarkMode}
                 className="button day-mode ms-2"
+                style={{width : "187px", height : "77px"}}
               >
-                Day Mode
+               <span>BatMan</span>
               </Button>
             ) : (
               <Button
                 variant="light"
                 onClick={toggleDarkMode}
                 className="button ms-2"
+                style={{width : "187px", height : "77px"}}
               >
-                <img src={nightmode} alt="Night Mode" width="60" />
+                call the batman
               </Button>
             )}
           </Nav>
