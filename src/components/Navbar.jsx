@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import nightmode from "./../img/night-mode.png";
+// import nightmode from "./../img/night-mode.png";
 import "./../style/navbar.css";
 import "./../style/darkmode.css";
 
