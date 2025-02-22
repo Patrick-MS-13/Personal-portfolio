@@ -1,7 +1,7 @@
 import React from "react";
 import profileImage from "./../img/file.png"; 
 import batman from "./../img/batman.png"; 
-import cvFile from "../file/PATRICK's resume.pdf";
+import cvFile from "../file/PATRICKs resume.pdf";
 import linkedin from "./../img/linkedin.svg";
 import github from "./../img/github.svg";
 import resume from "./../img/resume.svg";
