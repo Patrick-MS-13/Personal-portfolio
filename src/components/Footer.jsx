@@ -7,20 +7,19 @@ const Footer = ({ isDarkMode }) => (
     className={`footer text-center py-3 ${isDarkMode ? "bg-dark text-white" : "bg-light text-dark"}`}
   >
     <div>
-  <p>
-    &copy; {new Date().getFullYear()}{" "}
-    <span
-      style={{
-        color: isDarkMode ? "yellow" : "inherit",
-        fontWeight: isDarkMode ? "bold" : "normal",
-      }}
-    >
-      {isDarkMode ? "Patrick Batman" : "Patrick MS"}
-    </span>
-    . All rights reserved.
-  </p>
-</div>
-
+      <p>
+        &copy; {new Date().getFullYear()}{" "}
+        <span
+          style={{
+            color: isDarkMode ? "yellow" : "inherit",
+            fontWeight: isDarkMode ? "bold" : "normal",
+          }}
+        >
+          {isDarkMode ? "Patrick Batman" : "Patrick MS"}
+        </span>
+        . All rights reserved.
+      </p>
+    </div>
     <BackToTopButton isDarkMode={isDarkMode} /> {/* Pass the isDarkMode prop */}
   </footer>
 );
