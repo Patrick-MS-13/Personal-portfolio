@@ -82,6 +82,7 @@
 
 .navbar-brand.light-mode {
   color: #333; /* Dark color for light mode */
+  height: 30px;
 }
 
 .navbar-brand.dark-mode {

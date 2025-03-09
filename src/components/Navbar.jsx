@@ -97,7 +97,7 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
                 className="button ms-2"
                 style={{width : "187px", height : "77px"}}
               >
-                call the batman
+                <p style={{width : "180px", height : "23px"}}>call the batman</p>
               </Button>
             )}
           </Nav>

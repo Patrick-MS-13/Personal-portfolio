@@ -10,12 +10,12 @@ const Contact = ({ isDarkMode }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const formData = new FormData();
     formData.append('name', name);
     formData.append('email', email);
     formData.append('message', message);
-  
+
     try {
       const response = await fetch('https://formspree.io/f/mldenrna', {
         method: 'POST',
@@ -24,7 +24,7 @@ const Contact = ({ isDarkMode }) => {
         },
         body: formData,
       });
-  
+
       if (response.ok) {
         setStatusMessage('Your message has been sent!');
         setStatusType('success');
@@ -37,22 +37,22 @@ const Contact = ({ isDarkMode }) => {
       setStatusMessage('Something went wrong. Please try again.');
       setStatusType('error');
     }
-  
+
     setName('');
     setEmail('');
     setMessage('');
-  
+
     setTimeout(() => {
       setStatusMessage('');
       setStatusType('');
     }, 4000);
   };
-  
+
   return (
     <section id="contact" className={`contact-section py-5 ${isDarkMode ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
       <div className="container">
-        <h2 className="text-center mb-4" style={{width: "202px", margin: "0 auto", fontWeight: "900",  textAlign: "center"}}>Contact Me</h2>
-        
+        <h2 className="text-center mb-4" style={{ width: "202px", margin: "0 auto", fontWeight: "900", textAlign: "center" }}>Contact Me</h2>
+
         {/* Show success or error message */}
         {statusMessage && (
           <div className={`alert text-center ${statusType === 'success' ? 'alert-success' : 'alert-danger'}`}>
@@ -95,7 +95,23 @@ const Contact = ({ isDarkMode }) => {
             ></textarea>
           </div>
           <div className="text-center">
-            <button type="submit" className="btn btn-primary">Send Message</button>
+            {isDarkMode ? (
+              <button
+                type="submit"
+                className="btn btn-light day-mode"
+                style={{ width: "187px", height: "77px" }}
+              >
+                 <p style={{ width: "167px", height: "23px" }}>Send Message</p>
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="btn btn-primary"
+                style={{ width: "187px", height: "77px" }}
+              >
+                <p style={{ width: "150px", height: "23px" }}>Send Message</p>
+              </button>
+            )}
           </div>
         </form>
       </div>
