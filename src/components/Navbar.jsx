@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import nightmode from "./../img/night-mode.png";
 import "./../style/navbar.css";
 import "./../style/darkmode.css";
 
@@ -42,9 +41,7 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
   return (
     <Navbar
       expand="lg"
-      className={`${
-        isDarkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"
-      }`}
+      className={`${isDarkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"}`}
     >
       <Container>
         <Navbar.Brand
@@ -54,54 +51,37 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
           {currentDateTime.date} | {currentDateTime.time}
           <span className="time-period">{currentDateTime.period}</span>
         </Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link
-              onClick={() => scrollToSection("about")}
-              className={isDarkMode ? "text-light" : "text-dark"}
-            >
+          <Nav className="ms-auto d-none d-lg-flex">
+            <Nav.Link onClick={() => scrollToSection("about")} className={isDarkMode ? "text-light" : "text-dark"} style={{ margin : "22px", fontSize: "30px"}}>
               About
             </Nav.Link>
-            <Nav.Link
-              onClick={() => scrollToSection("skills")}
-              className={isDarkMode ? "text-light" : "text-dark"}
-            >
+            <Nav.Link onClick={() => scrollToSection("skills")} className={isDarkMode ? "text-light" : "text-dark"}style={{ margin : "22px", fontSize: "30px"}}>
               Skills
             </Nav.Link>
-            <Nav.Link
-              onClick={() => scrollToSection("projects")}
-              className={isDarkMode ? "text-light" : "text-dark"}
-            >
+            <Nav.Link onClick={() => scrollToSection("projects")} className={isDarkMode ? "text-light" : "text-dark"}style={{ margin : "22px", fontSize: "30px"}}>
               Projects
             </Nav.Link>
-            <Nav.Link
-              onClick={() => scrollToSection("contact")}
-              className={isDarkMode ? "text-light" : "text-dark"}
-            >
+            <Nav.Link onClick={() => scrollToSection("contact")} className={isDarkMode ? "text-light" : "text-dark"}style={{ margin : "22px", fontSize: "30px"}}>
               Contact
             </Nav.Link>
-            {isDarkMode ? (
-              <Button
-                variant="light"
-                onClick={toggleDarkMode}
-                className="button day-mode ms-2"
-                style={{width : "187px", height : "77px"}}
-              >
-               <span>BatMan</span>
-              </Button>
-            ) : (
-              <Button
-                variant="light"
-                onClick={toggleDarkMode}
-                className="button ms-2"
-                style={{width : "187px", height : "77px"}}
-              >
-                <p style={{width : "180px", height : "23px"}}>call the batman</p>
-              </Button>
-            )}
           </Nav>
         </Navbar.Collapse>
+
+        {/* Button remains visible on all screen sizes */}
+        <div className="ms-auto">
+          {isDarkMode ? (
+            <Button variant="light" onClick={toggleDarkMode} className="button day-mode" style={{ width: "90", height: "30" }}>
+              <span style={{ height: "22px", paddingTop: "3px", fontSize: "11px" }}>BatMan</span>            </Button>
+          ) : (
+            <Button variant="light" onClick={toggleDarkMode} className="button" style={{ width: "90px", height: "30px" }}>
+              <p style={{ width: "53", height: "23px"}}>call the batman</p>
+            </Button>
+          )}
+        </div>
       </Container>
     </Navbar>
   );
