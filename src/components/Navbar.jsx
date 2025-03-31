@@ -78,7 +78,7 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
               <span style={{ height: "22px", paddingTop: "3px", fontSize: "11px" }}>BatMan</span>            </Button>
           ) : (
             <Button variant="light" onClick={toggleDarkMode} className="button" style={{ width: "90px", height: "30px" }}>
-              <p style={{ width: "53", height: "23px"}}>call the batman</p>
+              <p style={{ width: "150", height: "22px"}}>call the batman</p>
             </Button>
           )}
         </div>
