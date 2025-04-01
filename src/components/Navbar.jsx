@@ -74,11 +74,11 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
         {/* Button remains visible on all screen sizes */}
         <div className="ms-auto">
           {isDarkMode ? (
-            <Button variant="light" onClick={toggleDarkMode} className="button day-mode" style={{ width: "123", height: "47" }}>
-              <span style={{ height: "23px", left: "63px", fontSize: "16px" }}>BATMAN</span>            </Button>
+            <Button variant="light" onClick={toggleDarkMode} className="button day-mode" style={{ width: "123px", height: "47px" }}>
+              <span style={{ height: "24px", left: "63px", fontSize: "16px" }}>BATMAN</span>            </Button>
           ) : (
-            <Button variant="light" onClick={toggleDarkMode} className="button" style={{ width: "123px", height: "47px" }}>
-              <p style={{ width: "150", height: "22px"}}>call the batman</p>
+            <Button variant="light" onClick={toggleDarkMode} className="button" style={{ width: "140px", height: "50px" }}>
+              <p style={{ width: "109px", height: "22px"}}>call the batman</p>
             </Button>
           )}
         </div>
