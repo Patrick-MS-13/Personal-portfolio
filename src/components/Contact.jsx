@@ -101,7 +101,7 @@ const Contact = ({ isDarkMode }) => {
                 className="btn btn-light day-mode"
                 style={{ width: "187px", height: "77px" }}
               >
-                 <p style={{ width: "167px", height: "23px" }}>Send Message</p>
+                 <p style={{ width: "167px", height: "23px" }}>Send the signel</p>
               </button>
             ) : (
               <button
