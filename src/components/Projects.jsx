@@ -36,13 +36,13 @@ const Projects = ({ isDarkMode }) => {
       description: "Explore breathtaking travel destinations with this image slider. From the serene landscapes of Finland and Iceland to the vibrant charm of Australia, the Netherlands, Ireland, and Switzerland, discover stunning locations that spark wanderlust.",
       skills: ["React", "JavaScript", "CSS"],
     },
-    {
-      // pic: "./images/STOPWATCH.png",
-      name: "APOLOGY EXPRESS",
-      url: "https://sorry-from-patrick.netlify.app/",
-      description: "Apology Express offers a heartfelt way to say sorry with just one click. Send your sincerest apologies and express your emotions in a simple, meaningful gesture. Make amends and show your loved ones how much you care.",
-      skills: ["React", "JavaScript", "CSS"],
-    },
+    // {
+    //   pic: "./images/STOPWATCH.png",
+    //   name: "APOLOGY EXPRESS",
+    //   url: "https://sorry-from-patrick.netlify.app/",
+    //   description: "Apology Express offers a heartfelt way to say sorry with just one click. Send your sincerest apologies and express your emotions in a simple, meaningful gesture. Make amends and show your loved ones how much you care.",
+    //   skills: ["React", "JavaScript", "CSS"],
+    // },
     {
       // pic: "./images/personal portfolio.png",
       name: "FLYING HEARTS",
