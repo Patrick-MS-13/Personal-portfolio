@@ -42,8 +42,8 @@
 }
 
 .button p {
-  margin: -2px;
-  font-size: 8px;
+  /* margin: -2px; */
+  font-size: 13px;
 }
 
 .day-mode {
