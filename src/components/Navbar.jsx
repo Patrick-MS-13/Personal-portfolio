@@ -5,67 +5,66 @@ import "./../style/navbar.css";
 import "./../style/darkmode.css";
 
 const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
-  const [currentDateTime, setCurrentDateTime] = useState({ date: "", time: "", period: "" });
+  const [currentDateTime, setCurrentDateTime] = useState({ date: "", time: "" });
 
   // Function to update the current date and time
   const updateDateTime = () => {
     const now = new Date();
-    const options = { weekday: "short", month: "short", day: "numeric" };
-    const formattedDate = now.toLocaleDateString("en-US", options);
+    const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-    let hours = now.getHours();
-    const period = hours >= 12 ? "PM" : "AM";
-    hours = hours % 12 || 12; // Convert to 12-hour format
-    const minutes = now.getMinutes().toString().padStart(2, "0");
-    const seconds = now.getSeconds().toString().padStart(2, "0");
+    const formattedDate = now.toLocaleDateString("en-US", {
+      weekday: "short",
+      month: "short",
+      day: "numeric",
+      timeZone: userTimeZone,
+    });
 
-    const formattedTime = `${hours}:${minutes}:${seconds}`;
+    const formattedTime = now.toLocaleTimeString("en-US", {
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+      timeZone: userTimeZone,
+    });
 
-    setCurrentDateTime({ date: formattedDate, time: formattedTime, period });
+    setCurrentDateTime({ date: formattedDate, time: formattedTime });
   };
 
-  // Update the date and time every second
   useEffect(() => {
     updateDateTime(); // Initial call
     const intervalId = setInterval(updateDateTime, 1000);
     return () => clearInterval(intervalId);
   }, []);
 
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
+  // Scroll to section function
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
   return (
-    <Navbar
-      expand="lg"
-      className={`${isDarkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"}`}
-    >
+    <Navbar expand="lg" className={isDarkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"}>
       <Container>
-        <Navbar.Brand
-          href="#home"
-          className={`navbar-brand ${isDarkMode ? "dark-mode" : "light-mode"}`}
-        >
+        <Navbar.Brand href="#home" className={`navbar-brand ${isDarkMode ? "dark-mode" : "light-mode"}`}>
           {currentDateTime.date} | {currentDateTime.time}
-          <span className="time-period">{currentDateTime.period}</span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto d-none d-lg-flex">
-            <Nav.Link onClick={() => scrollToSection("about")} className={isDarkMode ? "text-light" : "text-dark"} style={{ margin : "22px", fontSize: "30px"}}>
+            <Nav.Link onClick={() => scrollToSection("about")} className={isDarkMode ? "text-light" : "text-dark"} style={{ margin: "22px", fontSize: "30px" }}>
               About
             </Nav.Link>
-            <Nav.Link onClick={() => scrollToSection("skills")} className={isDarkMode ? "text-light" : "text-dark"}style={{ margin : "22px", fontSize: "30px"}}>
+            <Nav.Link onClick={() => scrollToSection("skills")} className={isDarkMode ? "text-light" : "text-dark"} style={{ margin: "22px", fontSize: "30px" }}>
               Skills
             </Nav.Link>
-            <Nav.Link onClick={() => scrollToSection("projects")} className={isDarkMode ? "text-light" : "text-dark"}style={{ margin : "22px", fontSize: "30px"}}>
+            <Nav.Link onClick={() => scrollToSection("projects")} className={isDarkMode ? "text-light" : "text-dark"} style={{ margin: "22px", fontSize: "30px" }}>
               Projects
             </Nav.Link>
-            <Nav.Link onClick={() => scrollToSection("contact")} className={isDarkMode ? "text-light" : "text-dark"}style={{ margin : "22px", fontSize: "30px"}}>
+            <Nav.Link onClick={() => scrollToSection("contact")} className={isDarkMode ? "text-light" : "text-dark"} style={{ margin: "22px", fontSize: "30px" }}>
               Contact
             </Nav.Link>
           </Nav>
@@ -75,10 +74,11 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
         <div className="ms-auto">
           {isDarkMode ? (
             <Button variant="light" onClick={toggleDarkMode} className="button day-mode" style={{ width: "123px", height: "47px" }}>
-              <span style={{ height: "24px", left: "63px", fontSize: "16px" }}>BATMAN</span>            </Button>
+              <span style={{ height: "24px", left: "63px", fontSize: "16px" }}>BATMAN</span>
+            </Button>
           ) : (
             <Button variant="light" onClick={toggleDarkMode} className="button" style={{ width: "140px", height: "50px" }}>
-              <p style={{ width: "109px", height: "22px"}}>call the batman</p>
+              <p style={{ width: "109px", height: "22px" }}>call the batman</p>
             </Button>
           )}
         </div>

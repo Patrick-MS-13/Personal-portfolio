@@ -101,19 +101,19 @@ const Contact = ({ isDarkMode }) => {
                 className="btn btn-light day-mode"
                 style={{ width: "187px", height: "77px" }}
               >
-                 <p style={{ width: "167px", height: "23px" }}>Send the signel</p>
+                <p style={{ width: "167px", height: "23px" }}>Send the signel</p>
               </button>
             ) : (
-              <button
+              <input
                 type="submit"
+                value="Send Message"
                 className="btn btn-primary"
-                style={{ width: "187px", height: "77px" }}
-              >
-                <p style={{ width: "150px", height: "23px" }}>Send Message</p>
-              </button>
+                style={{ width: "138px", height: "53px" }}
+              />
             )}
           </div>
         </form>
+
       </div>
     </section>
   );
