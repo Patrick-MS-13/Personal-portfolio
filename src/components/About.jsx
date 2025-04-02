@@ -1,13 +1,11 @@
 import React from "react";
-import profileImage from "./../img/file.png"; 
-import batman from "./../img/batman.png"; 
+import profileImage from "./../img/file.png";
+import batman from "./../img/batman.png";
 import cvFile from "../file/PATRICKs resume.pdf";
-import linkedin from "./../img/linkedin.svg";
-import github from "./../img/github.svg";
-import resume from "./../img/resume.svg";
-// import Imbatman from "./../img/I'm-batman.png";
 import './../style/about.css';
-import { Typewriter } from 'react-simple-typewriter'
+import { Typewriter } from 'react-simple-typewriter';
+import { Github, Download, Linkedin } from "lucide-react";
+
 
 const About = ({ isDarkMode }) => (
   <section
@@ -16,14 +14,14 @@ const About = ({ isDarkMode }) => (
   >
     <div className="container-about d-flex flex-wrap flex-md-row align-items-center">
       {/* About Me Section */}
-      <div className="about-content" style={{ flex: "1"}}>
+      <div className="about-content" style={{ flex: "1" }}>
         <h2
           className="mb-4"
           style={{
             width: "175px",
             height: "50px",
-            textAlign: "center", // Center text within the h2 element
-            fontWeight: "900", // Set font weight to bold
+            textAlign: "center",
+            fontWeight: "900",
           }}
         >
           About Me
@@ -32,7 +30,7 @@ const About = ({ isDarkMode }) => (
           Hi, I'm{" "}
           <strong
             style={{
-              color: isDarkMode ? "yellow" : "black", // Set name color to yellow in night mode
+              color: isDarkMode ? "yellow" : "black",
             }}
           >
             {isDarkMode ? "PATRICK BATMAN" : "Patrick MS"}
@@ -41,7 +39,7 @@ const About = ({ isDarkMode }) => (
           <span>
             <Typewriter
               words={["Frontend Developer", "Web Developer", "JavaScript Enthusiast"]}
-              loop={0} // Infinite loop
+              loop={0}
               cursor
               cursorStyle="|"
               typeSpeed={70}
@@ -61,17 +59,17 @@ const About = ({ isDarkMode }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={linkedin} alt="LinkedIn" width="40" />
+            <Linkedin size={30} style={{ color: "black" }} />
           </a>
           <a
             href="https://github.com/Patrick-MS-13"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src={github} alt="GitHub" width="40" />
+            <Github size={30} style={{ color: "black" }} />
           </a>
           <a href={cvFile} download>
-            <img src={resume} alt="My CV" width="40" />
+            <Download size={30} style={{ color: "black" }} />
           </a>
         </div>
       </div>
@@ -79,20 +77,17 @@ const About = ({ isDarkMode }) => (
       {/* Profile Image Section */}
       <div className="profile-image" style={{ flex: "1", textAlign: "center" }}>
         <img
-          src={isDarkMode ? batman : profileImage} // Conditional rendering
+          src={isDarkMode ? batman : profileImage}
           alt="Profile or Batman"
-          className="profile-image img-fluid image-animation" // Add animation and profile-image class here
+          className="profile-image img-fluid image-animation"
           style={{
             marginTop: isDarkMode ? "-78px" : "-90px",
             marginBottom: isDarkMode ? "-380px" : "-252px",
-            // marginLeft: "58px",
           }}
         />
-
       </div>
     </div>
   </section>
-
 );
 
 export default About;
