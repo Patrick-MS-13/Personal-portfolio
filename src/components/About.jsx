@@ -59,19 +59,20 @@ const About = ({ isDarkMode }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Linkedin size={30} style={{ color: "black" }} />
+            <Linkedin size={30} style={{ color: isDarkMode ? "white" : "black" }} />
           </a>
           <a
             href="https://github.com/Patrick-MS-13"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Github size={30} style={{ color: "black" }} />
+            <Github size={30} style={{ color: isDarkMode ? "white" : "black" }} />
           </a>
           <a href={cvFile} download>
-            <Download size={30} style={{ color: "black" }} />
+            <Download size={30} style={{ color: isDarkMode ? "white" : "black" }} />
           </a>
         </div>
+
       </div>
 
       {/* Profile Image Section */}
