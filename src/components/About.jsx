@@ -6,7 +6,6 @@ import './../style/about.css';
 import { Typewriter } from 'react-simple-typewriter';
 import { Github, Download, Linkedin } from "lucide-react";
 
-
 const About = ({ isDarkMode }) => (
   <section
     id="about"
