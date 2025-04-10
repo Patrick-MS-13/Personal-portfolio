@@ -110,6 +110,23 @@ button:hover:after {
   box-shadow: 0px -13px 56px 12px #ffffffa6;
 }
 
+
+button:hover:after {
+  background: #222; /* dark background for hover */
+}
+
+button:hover span,
+button:hover p {
+  color: white;
+}
+
+button span,
+button p {
+  z-index: 2;
+  position: relative;
+}
+
+
 button span {
   position: absolute;
   width: 100%;
@@ -143,3 +160,35 @@ button:before {
 button:hover:before {
   width: 100%;
 }
+.flip-card-x {
+  perspective: 1000px;
+  width: 220px;
+  height: 80px; /* 👈 Give height so both sides have same container */
+  position: relative;
+}
+
+.flip-card-inner-x {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flip-card-front-x,
+.flip-card-back-x {
+  position: absolute;
+  width: 100%;
+  height: 100%; /* 👈 Make sure height matches parent */
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* 👈 Center content */
+  font-size: 18px;
+}
+
+.flip-card-back-x {
+  transform: rotateX(180deg);
+}
+

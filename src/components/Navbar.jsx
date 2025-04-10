@@ -6,8 +6,9 @@ import "./../style/darkmode.css";
 
 const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
   const [currentDateTime, setCurrentDateTime] = useState({ date: "", time: "" });
+  const [showName, setShowName] = useState(false); // ⬅️ flip between time and name
 
-  // Function to update the current date and time
+  // Update current time
   const updateDateTime = () => {
     const now = new Date();
     const userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -31,12 +32,18 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
   };
 
   useEffect(() => {
-    updateDateTime(); // Initial call
+    updateDateTime();
     const intervalId = setInterval(updateDateTime, 1000);
     return () => clearInterval(intervalId);
   }, []);
 
-  // Scroll to section function
+  useEffect(() => {
+    const flipInterval = setInterval(() => {
+      setShowName(prev => !prev);
+    }, 5000); // ⏱ every 5 seconds
+    return () => clearInterval(flipInterval);
+  }, []);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -48,7 +55,26 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
     <Navbar expand="lg" className={isDarkMode ? "navbar-dark bg-dark" : "navbar-light bg-light"}>
       <Container>
         <Navbar.Brand href="#home" className={`navbar-brand ${isDarkMode ? "dark-mode" : "light-mode"}`}>
-          {currentDateTime.date} | {currentDateTime.time}
+          <div className="flip-card-x">
+            <div
+              className="flip-card-inner-x"
+              style={{
+                transform: `rotateX(${showName ? 180 : 0}deg)`
+              }}
+            >
+              {/* Front: Date & Time */}
+              <div className="flip-card-front-x"> {currentDateTime.date} | {currentDateTime.time}</div>
+
+              {/* Back: Name */}
+              <div className="flip-card-back-x">
+                {isDarkMode ? (
+                  <div style={{ color: "yellow", fontWeight: "bold" }}>Patrick Batman</div>
+                ) : (
+                  <div>Patrick MS</div>
+                )}
+              </div>
+            </div>
+          </div>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -70,7 +96,6 @@ const MyNavbar = ({ isDarkMode, toggleDarkMode }) => {
           </Nav>
         </Navbar.Collapse>
 
-        {/* Button remains visible on all screen sizes */}
         <div className="ms-auto">
           {isDarkMode ? (
             <Button variant="light" onClick={toggleDarkMode} className="button day-mode" style={{ width: "123px", height: "47px" }}>
