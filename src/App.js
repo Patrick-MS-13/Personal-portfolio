@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Cursor from './components/Cursor';
 import WelcomeMessage from './components/welcome Notes/WelcomeMessage';
 import OfflineCandle from './components/Offline/OfflineCandle'; 
+import ChatBot from './components/Chat Bot/ChatBot';
 
 import './style/button.css';
 import './style/main.css'; 
@@ -53,6 +54,7 @@ const App = () => {
         <>
           <MyNavbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
           <About isDarkMode={isDarkMode} />
+          <ChatBot isDarkMode={isDarkMode} />
           <Skills isDarkMode={isDarkMode} />
           <Projects isDarkMode={isDarkMode} />
           <Contact isDarkMode={isDarkMode} />
