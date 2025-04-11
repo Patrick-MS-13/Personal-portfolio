@@ -9,7 +9,7 @@ const ChatBot = () => {
     const [input, setInput] = useState('');
     const [isTyping, setIsTyping] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, ] = useState(false);
     const chatboxRef = React.useRef(null);
     const [showScrollDown, setShowScrollDown] = useState(false);
 
@@ -70,63 +70,71 @@ const ChatBot = () => {
 
     const getBotResponse = (message) => {
         if (message.includes('name')) return "I'm Patrick's personal chatbot!";
-
+    
         if (message.includes('skills') || message.includes('tech'))
             return "Patrick knows React, Python, SQL, and loves working with data!";
-
+    
         if (message.includes('contact'))
             return "You can contact him through the Contact section of this portfolio!";
-
+    
         if (message.includes('project'))
             return "Patrick has built cool projects with React, Data Visualizations, and Time Apps. Check out the Projects section!";
-
+    
         if (message.includes('experience'))
             return "He has experience in frontend development and is currently exploring Data Analytics.";
-
+    
         if (message.includes('hello') || message.includes('hi') || message.includes('hey'))
             return "Hey there! 👋 How can I assist you?";
-
+    
         if (message.includes('time in') || message.includes('world time'))
             return "🌍 World time support is coming soon! For now, try asking 'time in London' or 'time in Tokyo'.";
-
+    
         if (message.match(/time in\s+\w+/)) {
             const city = message.split("time in")[1].trim();
             return `🕒 The current time in ${city} is not available yet, but stay tuned for this feature!`;
         }
-
-        if (message.includes('time'))
-            return `Right now it's ${new Date().toLocaleTimeString()}`;
-
+    
+        if (message.includes('time')) {
+            const timeString = new Date().toLocaleTimeString('en-US', {
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true
+            });
+            return `Right now it's ${timeString}`;
+        }
+    
         if (message.includes('date'))
             return `Today's date is ${new Date().toLocaleDateString()}`;
-
+    
         if (message.includes('weather in')) {
             const place = message.split("weather in")[1]?.trim();
             return `🌤️ Weather details for ${place} will be available in the future update!`;
         }
-
+    
         if (message.includes('weather'))
             return "☀️ It’s currently sunny in Patrick’s world 😄. Real-time weather support is coming soon!";
-
+    
         if (message.includes('news') || message.includes('latest news'))
             return "📰 Stay tuned! News integration is coming soon. Meanwhile, check your favorite news source for updates.";
-
+    
         if (message.includes('education'))
             return "Patrick has a solid foundation in programming and continues to learn through hands-on projects and certifications.";
-
+    
         if (message.includes('hobbies'))
             return "Patrick enjoys coding, exploring data, building cool web apps, and diving into new tech.";
-
+    
         if (message.includes('goal') || message.includes('future'))
             return "Patrick aims to become a top-tier data analyst and continue building intelligent, user-focused applications.";
-
+    
         if (message.includes('clear')) {
             handleClear();
             return '';
         }
-
-        return "Hmm... I’m still learning. Try asking about skills, projects, weather, news, or how to contact Patrick.";
+    
+        return "Hmm... I’m still learning.";
     };
+    
 
     return (
         <>
