@@ -129,8 +129,8 @@
     font-size: 22px;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.2),
                 0 0 25px rgba(0, 255, 255, 0.1);
-    transition: all 0.3s ease;
-    animation: wingsFlap 2.5s ease-in-out infinite;
+    transition: all 0.8s ease;
+    animation: wingsFlap 0.1s ease-in-out infinite;
 }
 @keyframes wingsFlap {
     0%, 100% {
